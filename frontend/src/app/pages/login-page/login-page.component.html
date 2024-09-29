@@ -1,0 +1,37 @@
+<div
+  class="w-full h-screen bg-no-repeat bg-cover flex items-center justify-between px-[164px]"
+  style="background-image: url('bg.png')"
+>
+  <form
+    [formGroup]="loginForm"
+    (submit)="onFormSubmit()"
+    class="flex flex-col ml-[95px] h-[357px] max-w-[440px]"
+  >
+    <h1 class="font-semibold text-[48px]">Sign In</h1>
+    <div class="mt-[50px] flex flex-col gap-y-[14px]">
+      <div class="flex flex-col gap-y-[8px]">
+        <label class="text-[12px]">Username</label>
+        <app-input 
+          [control]="getControl('login')"
+          type="text"
+          ></app-input>
+      </div>
+
+      <div class="flex flex-col gap-y-[8px] relative">
+        <label class="text-[12px]">Password</label>
+        <app-input
+          [control]="getControl('password')"
+          [type]="showPassword ? 'text' : 'password'"
+        ></app-input>
+        <img
+          class="absolute right-5 top-[38px] cursor-pointer transition-transform hover:scale-105"
+          (click)="onShowPasswordChange()"
+          [src]="showPassword ? 'eye.svg' : 'eye-off.svg'"
+        />
+      </div>
+      <app-button type="submit" class="mt-4" text="Login"></app-button>
+    </div>
+  </form>
+
+  <img src="logo-login.png" />
+</div>

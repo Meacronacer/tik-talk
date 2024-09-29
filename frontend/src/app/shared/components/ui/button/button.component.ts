@@ -18,7 +18,7 @@ export class ButtonComponent implements OnInit {
   public class: string | string[] = '';
 
   public styles = {
-    base: 'h-[44px] py-[10px] flex items-center justify-center gap-x-2 text-[14px] leading-[171%] font-extrabold transition-colors',
+    base: 'h-[44px] flex items-center gap-x-2 text-[14px] leading-[171%] font-extrabold transition-colors',
     size: {
       default: 'px-[20px]',
       small: 'px-[14px]',

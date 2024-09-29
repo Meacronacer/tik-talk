@@ -1,6 +1,8 @@
 <button [className]="class" [type]="type">
-    {{ text }}
+    @if (text) {
+        {{ text }}
+    }
     @if (icon) {
-        <svg class="w-[14px] h-[14px]" [icon]="icon"></svg>
+        <svg class="w-[14px] h-[14px] mt-[2px] ml-[2px]" [icon]="icon"></svg>
     }
 </button>

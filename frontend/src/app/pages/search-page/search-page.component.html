@@ -1,1 +1,17 @@
-<p>search-page works!</p>
+<section class="w-[1140px] p-[24px]">
+    <header class="h-[78px] border-[1px] border-light-solid w-full bg-dark-solid flex items-center gap-x-5 p-4">
+        <div class="relative w-full">
+            <input class="bg-dark-solid border-b-[1px] h-[44px] w-full focus:outline-none border-light-solid" />
+            <svg class="w-[16px] h-[16px] absolute right-1 top-2" icon="search"></svg>
+        </div>
+        
+        <div class="border-[1px] flex items-center justify-center p-[15px] mr-1">
+            <svg class="w-[14px] h-[14px]" icon="flashlight"></svg>
+        </div>
+    </header>
+
+    <div class="mt-5 flex flex-col gap-y-2">
+        <app-search-item></app-search-item>
+        <app-search-item></app-search-item>
+    </div>
+</section>

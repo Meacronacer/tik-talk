@@ -1,14 +1,16 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { SvgIconComponent } from '../svg-icon/svg-icon.component';
 
 @Component({
   selector: 'app-button',
   standalone: true,
-  imports: [],
+  imports: [SvgIconComponent],
   templateUrl: './button.component.html',
   styleUrl: './button.component.scss',
 })
 export class ButtonComponent implements OnInit {
   @Input() text!: string;
+  @Input() icon?: string;
   @Input() type: 'button' | 'submit' = 'button';
   @Input() size: 'small' | 'default' | 'big' = 'default';
   @Input() variant: 'default' | 'secondary' = 'default';
@@ -16,11 +18,11 @@ export class ButtonComponent implements OnInit {
   public class: string | string[] = '';
 
   public styles = {
-    base: 'h-[44px] py-[10px] px-[20px] text-[14px] leading-[171%] font-bold transition-colors',
+    base: 'h-[44px] py-[10px] flex items-center justify-center gap-x-2 text-[14px] leading-[171%] font-extrabold transition-colors',
     size: {
-      default: 'w-[440px]',
-      small: '',
-      big: '',
+      default: 'px-[20px]',
+      small: 'px-[14px]',
+      big: 'w-full',
     },
     variants: {
       default:

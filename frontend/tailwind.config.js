@@ -15,5 +15,28 @@ module.exports = {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    function ({addUtilities}) {
+      const newUtilities = {
+        '.scrollbar-thin': {
+          useScrollbarWidth: 'thin',
+          scrollbarColor: '#ae7aff',
+        },
+        '.scrollbar-webkit': {
+          '&::-webkit-scrollbar': {
+            width:'4px',
+          },
+          '&::-webkit-scrollbar-track': {
+            background: '#161616',
+          },
+          '&::-webkit-scrollbar-thumb': {
+            backgroundColor: '#ae7aff',
+            borderRadius: '20px',
+          }
+        }
+      }
+
+      addUtilities(newUtilities, ['responsive', "hover"])
+    }
+  ],
 };

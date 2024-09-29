@@ -1,0 +1,40 @@
+<div class="border-light-solid bg-dark-solid border-[1px] h-fit p-5">
+    <div class="flex items-stretch gap-x-2 relative">
+        <img class="w-[32px] h-[32px] mr-2" src="profile.png" />
+        <h4 class="text-[14px]">Райан Гослинг</h4>
+        <span class="text-[12px] text-light-transparent">2 часа назад</span>
+        <svg class="w-3 h-1 absolute right-4 top-5 cursor-pointer hover:text-primary" icon="dots"></svg>
+    </div>
+
+    <p class="pl-[48px] pr-[52px] text-[12px] leading-[133%]">
+        Список навыков, который мы обсудили выше, — основа резюме, но не единственная его часть. Также можно рассказать о себе в классическом смысле — этот раздел можно добавить в сопроводительное письмо.
+    </p>
+
+    <div class="flex items-center gap-x-5 mt-4 pl-[48px]">
+        <div (click)="showCommentsToggle()" [class]="(showComments ? 'text-primary' : ' ') + ' flex items-center gap-x-1 cursor-pointer'">
+            <svg class="h-4 w-[17px]" icon="comments"></svg>
+            <span class="text-[12px]">15</span>
+        </div>
+        <div class="flex items-center gap-x-1 cursor-pointer">
+            <svg class="h-4 w-[17px]" icon="likes"></svg>
+            <span class="text-[12px]">28</span>
+        </div>
+    </div>
+
+    <div [class]="(showComments ? 'max-h-[125px] ' : 'max-h-0 ') +  
+    ' pl-[48px] mt-5 w-full flex flex-col gap-y-[2px] transition-all mb-3 overflow-y-scroll scrollbar-thin scrollbar-webkit'">
+        <app-profile-comment></app-profile-comment>
+        <app-profile-comment></app-profile-comment>
+        <app-profile-comment></app-profile-comment>
+        <app-profile-comment></app-profile-comment>
+        <app-profile-comment></app-profile-comment>
+        <app-profile-comment></app-profile-comment>
+        <app-profile-comment></app-profile-comment>
+        <app-profile-comment></app-profile-comment>
+    </div>
+
+    <div class="border-dashed border-[1px] mt-2 ml-[48px] rounded-[2px]">
+        <app-profile-input placeholder="Напишите комментарий"></app-profile-input>
+    </div>
+
+</div>

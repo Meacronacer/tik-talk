@@ -9,13 +9,17 @@
 
     <div class="flex gap-x-[64px] py-[24px] pt-12">
 
-        <div class="w-[688px] flex flex-col gap-y-4">
+        <div class="w-[688px] pb-5 flex flex-col gap-y-4">
             <app-profile-input class="border-[1px]" placeholder="Напишите что-нибудь"></app-profile-input>
 
-            <div class="max-h-[340px] overflow-y-auto scrollbar-thin scrollbar-webkit">
+            <div class="max-h-[calc(100vh-340px)] overflow-y-auto scrollbar-thin scrollbar-webkit">
                 <app-profile-post></app-profile-post>
                 <app-profile-post></app-profile-post>
+                <app-profile-post></app-profile-post>
+
             </div>
+
+
         </div>
 
         

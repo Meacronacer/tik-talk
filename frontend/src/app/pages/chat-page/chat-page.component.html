@@ -1,1 +1,46 @@
-<p>chat-page works!</p>
+<section class="h-[calc(100%-48px)] flex w-[1092px] border-[1px] border-light-solid m-[24px] bg-dark-solid">
+    <div class="border-r-[1px] border-light-solid h-full w-[380px]">
+        <div class="relative w-[380px] h-[77px] border-b-[1px] px-5 py-4">
+            <input placeholder="Искать..." class="bg-dark-solid text-[14px] border-b-[1px] h-[44px] w-full focus:outline-none border-light-solid" />
+            <svg class="w-[16px] h-[16px] absolute right-5 top-7" icon="search"></svg>
+        </div>
+
+        <div class="max-h-[calc(100vh-115px)] overflow-y-auto scrollbar-thin  scrollbar-webkit overflow-x-hidden">
+            <app-chat-user></app-chat-user>
+            <app-chat-user></app-chat-user>
+            <app-chat-user></app-chat-user>
+            <app-chat-user></app-chat-user>
+            <app-chat-user></app-chat-user>
+            <app-chat-user></app-chat-user>
+            <app-chat-user></app-chat-user>
+            <app-chat-user></app-chat-user>
+            <app-chat-user></app-chat-user>
+        </div>
+    </div>
+
+    <div class="w-full">
+        <div class="flex items-center justify-between border-b-[1px] border-light-solid py-4 px-5">
+            <div class="border-light-solid border-[1px] flex justify-center items-center h-[44px] w-[44px] hover:bg-dark-active cursor-pointer">
+                <svg class="w-4 h-4 text-light-solid" icon="arrow-left"></svg>
+            </div>
+            <div class="flex items-center gap-x-3">
+                <img class="w-8 h-8" src="profile.png" />
+                <h3>Кристина Локен</h3>
+            </div>
+            <div class="border-light-solid border-[1px] flex justify-center items-center h-[44px] w-[44px] hover:bg-dark-active cursor-pointer">
+                <svg class="w-[12px] h-[4px] text-light-solid rotate-90" icon="dots"></svg>
+            </div>
+        </div>
+
+        <div class="h-full relative px-5">
+            <div class="bg-dark-active text-center w-[111px] h-[28px] justify-center items-center flex absolute mx-auto left-0 right-0 top-4 text-[12px]">
+                Сегондя 
+            </div>
+
+            <div class="border-[1px] w-[calc(100%-40px)] border-light-solid absolute bottom-24">
+               <app-profile-input placeholder="Напишите что-нибудь.."></app-profile-input> 
+            </div>
+        </div>
+
+    </div>
+</section>

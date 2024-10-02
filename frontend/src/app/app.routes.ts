@@ -5,13 +5,19 @@ import { Routes } from '@angular/router';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { ChatPageComponent } from './pages/chat-page/chat-page.component';
 import { LayoutComponent } from './shared/components/shared/layout/layout.component';
+import { SettingsPageComponent } from './pages/settings-page/settings-page.component';
 
 export const routes: Routes = [
-  { path: '', component: LayoutComponent, children: [
-    { path: '', component: ProfilePageComponent},
-    { path: 'chat', component: ChatPageComponent },
-    { path: 'search', component: SearchPageComponent },
-  ]},
+  {
+    path: '',
+    component: LayoutComponent,
+    children: [
+      { path: '', component: ProfilePageComponent },
+      { path: 'chat', component: ChatPageComponent },
+      { path: 'search', component: SearchPageComponent },
+      { path: 'settings', component: SettingsPageComponent },
+    ],
+  },
   { path: 'login', component: LoginPageComponent },
   { path: 'signup', component: SignupPageComponent },
 ];

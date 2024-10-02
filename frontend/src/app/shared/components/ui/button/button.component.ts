@@ -18,7 +18,7 @@ export class ButtonComponent implements OnInit {
   public class: string | string[] = '';
 
   public styles = {
-    base: 'h-[44px] flex items-center gap-x-2 text-[14px] leading-[171%] font-extrabold transition-colors',
+    base: 'h-[44px] border-[1px] flex items-center gap-x-2 text-[14px] leading-[171%] font-extrabold transition-colors',
     size: {
       default: 'px-[20px]',
       small: 'px-[14px]',
@@ -26,8 +26,8 @@ export class ButtonComponent implements OnInit {
     },
     variants: {
       default:
-        'border-[1px] border-[#000] bg-[#ae7aff] text-[#000] hover:bg-[#000] hover:text-white hover:border-white ',
-      secondary: '',
+        'border-[#000] bg-[#ae7aff] text-[#000] hover:bg-[#000] hover:text-white hover:border-white ',
+      secondary: 'hover:bg-red-400 ',
     },
   };
 

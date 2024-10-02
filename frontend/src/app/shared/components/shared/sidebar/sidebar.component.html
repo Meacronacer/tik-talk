@@ -1,54 +1,71 @@
 <section class="py-5 w-[300px] h-screen bg-dark-solid relative">
-    <img class="px-[28px]" src="smallLogo.svg" alt="logo" />
+  <img class="px-[28px]" src="smallLogo.svg" alt="logo" />
 
-    <nav class="px-[12px] mt-5">
-        <ul class="flex flex-col gap-y-2">
-            @for (item of menuItems; track item.label) {
-                <li class="cursor-pointer hover:bg-dark-active"
-                 [routerLink]="item.link"
-                 [routerLinkActiveOptions]="{ exact: true }"
-                 routerLinkActive="bg-dark-active cursor-auto">
-                    <button
-                    routerLinkActive="text-primary cursor-auto"
-                    [routerLinkActiveOptions]="{ exact: true }"
-                    class="py-[8px] px-[16px] flex items-center gap-x-3 text-[14px] font-bold leading-[171%]">
-                        <svg class="h-4 w-4" [icon]="item.icon"></svg>
-                        <a>{{ item.label }}</a>
-                    </button>
-                </li>
-            } 
-        </ul>
-    </nav>
-
-    <h3 class="text-[12px] mt-5 px-[28px] text-light-transparent">Подписчики</h3>
-
-    <ul class="mt-[20px] px-[28px] flex flex-col gap-y-[6px]">
-        <li class="flex items-center gap-x-3 h-[48px] cursor-pointer hover:bg-dark-active hover:text-primary">
-            <img class="h-[32px] w-[32px]" src="profile.png" alt="subscriber" />
-            <a class="text-[14px] font-bold leading-[171%]">Сара Коннор</a>
-        </li>
-        <li class="flex items-center gap-x-3 h-[48px] cursor-pointer hover:bg-dark-active hover:text-primary">
-            <img class="h-[32px] w-[32px]" src="profile.png" alt="subscriber" />
-            <a class="text-[14px] font-bold leading-[171%]">Кристанна Локен</a>
-        </li>
-        <li class="flex items-center gap-x-3 h-[48px] cursor-pointer hover:bg-dark-active hover:text-primary">
-            <img class="h-[32px] w-[32px]" src="profile.png" alt="subscriber" />
-            <a class="text-[14px] font-bold leading-[171%]">Майкл Уинслоу</a>
-        </li>
+  <nav class="px-[12px] mt-5">
+    <ul class="flex flex-col gap-y-2">
+      @for (item of menuItems; track item.label) {
+      <li
+        class="cursor-pointer hover:bg-dark-active"
+        [routerLink]="item.link"
+        [routerLinkActiveOptions]="{ exact: true }"
+        routerLinkActive="bg-dark-active cursor-auto"
+      >
+        <button
+          routerLinkActive="text-primary cursor-auto"
+          [routerLinkActiveOptions]="{ exact: true }"
+          class="py-[8px] px-[16px] flex items-center gap-x-3 text-[14px] font-bold leading-[171%]"
+        >
+          <svg class="h-4 w-4" [icon]="item.icon"></svg>
+          <a>{{ item.label }}</a>
+        </button>
+      </li>
+      }
     </ul>
+  </nav>
 
-    <div class="text-primary cursor-pointer group flex items-center gap-x-3 text-[12px] px-[28px] mt-5 leading-[133%] font-[500]">
-        <a>Все подписчики</a>
-        <img class="group-hover:translate-x-5 transition-transform" src="arrow-right.svg" alt="arrow" />
+  <h3 class="text-[12px] mt-5 px-[28px] text-light-transparent">Подписчики</h3>
+
+  <ul class="mt-[20px] px-[28px] flex flex-col gap-y-[6px]">
+    <li
+      class="flex items-center gap-x-3 h-[48px] cursor-pointer hover:bg-dark-active hover:text-primary"
+    >
+      <img class="h-[32px] w-[32px]" src="profile.png" alt="subscriber" />
+      <a class="text-[14px] font-bold leading-[171%]">Сара Коннор</a>
+    </li>
+    <li
+      class="flex items-center gap-x-3 h-[48px] cursor-pointer hover:bg-dark-active hover:text-primary"
+    >
+      <img class="h-[32px] w-[32px]" src="profile.png" alt="subscriber" />
+      <a class="text-[14px] font-bold leading-[171%]">Кристанна Локен</a>
+    </li>
+    <li
+      class="flex items-center gap-x-3 h-[48px] cursor-pointer hover:bg-dark-active hover:text-primary"
+    >
+      <img class="h-[32px] w-[32px]" src="profile.png" alt="subscriber" />
+      <a class="text-[14px] font-bold leading-[171%]">Майкл Уинслоу</a>
+    </li>
+  </ul>
+
+  <div
+    class="text-primary cursor-pointer group flex items-center gap-x-3 text-[12px] px-[28px] mt-5 leading-[133%] font-[500]"
+  >
+    <a>Все подписчики</a>
+    <img
+      class="group-hover:translate-x-5 transition-transform"
+      src="arrow-right.svg"
+      alt="arrow"
+    />
+  </div>
+
+  <div class="px-[12px] h-10 w-full bottom-5 absolute">
+    <div
+      routerLink="settings"
+      routerLinkActive="text-primary"
+      class="px-4 py-1 flex items-center gap-x-3 hover:bg-dark-active cursor-pointer"
+    >
+      <img class="w-[32px] h-[32px]" src="profile.png" />
+      <span>ryan.gosling</span>
+      <svg class="ml-auto w-[14px] h-[14px]" icon="settings" />
     </div>
-
-
-    <div class="px-[12px] h-10 w-full bottom-5 absolute">
-        <div class="px-4 py-1 flex items-center gap-x-3 hover:bg-dark-active cursor-pointer">
-            <img class="w-[32px] h-[32px]" src="profile.png" />
-            <span>ryan.gosling</span>
-            <svg class="ml-auto w-[14px] h-[14px]" icon="settings" />
-        </div>
-    </div>
-
+  </div>
 </section>

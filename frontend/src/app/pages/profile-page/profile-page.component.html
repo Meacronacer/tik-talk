@@ -1,106 +1,121 @@
 <section class="p-[24px] min-w-[1140px]">
-    <header class="flex w-full items-center gap-x-[24px]">
-        <img src="profile.png" alt="profile-img" />
-        <h1 class="font-semibold text-[24px] text-light-solid">Райан Гослинг</h1>
-        <span class="text-[14px]">ryan.gosling</span>
-        <app-button class="ml-auto mr-[143px]" text="Редактировать" icon="settings"></app-button>
-    </header>
+  <header class="flex w-full items-center gap-x-[24px]">
+    <img src="profile.png" alt="profile-img" />
+    <h1 class="font-semibold text-[24px] text-light-solid">Райан Гослинг</h1>
+    <span class="text-[14px]">ryan.gosling</span>
+    <app-button
+      class="ml-auto mr-[143px]"
+      text="Редактировать"
+      icon="settings"
+    ></app-button>
+  </header>
 
+  <div class="flex gap-x-[64px] py-[24px] pt-12">
+    <div class="w-[688px] pb-5 flex flex-col gap-y-4">
+      <app-profile-input
+        class="border-[1px]"
+        placeholder="Напишите что-нибудь"
+      ></app-profile-input>
 
-    <div class="flex gap-x-[64px] py-[24px] pt-12">
-
-        <div class="w-[688px] pb-5 flex flex-col gap-y-4">
-            <app-profile-input class="border-[1px]" placeholder="Напишите что-нибудь"></app-profile-input>
-
-            <div class="max-h-[calc(100vh-340px)] overflow-y-auto scrollbar-thin scrollbar-webkit">
-                <app-profile-post></app-profile-post>
-                <app-profile-post></app-profile-post>
-                <app-profile-post></app-profile-post>
-
-            </div>
-
-
-        </div>
-
-        
-        <div class="w-[340px] px-[24px]">
-            <div class="flex justify-between">
-                <h5 class="font-extrabold text-[18px]">Подписчики</h5>
-                <div class="bg-[#98e9ab] text-[12px] text-dark-solid px-[6px] h-4 mt-1 font-bold flex justify-center items-center">28</div>
-            </div>
-
-            <ul class="mt-3 flex gap-x-[6px]">
-                <li>
-                    <a>
-                        <img src="profile.png" class="h-9 w-9" />
-                    </a>
-                </li>
-                <li>
-                    <a>
-                        <img src="profile.png" class="h-9 w-9" />
-                    </a>
-                </li>
-                <li>
-                    <a>
-                        <img src="profile.png" class="h-9 w-9" />
-                    </a>
-                </li>
-                <li>
-                    <a>
-                        <img src="profile.png" class="h-9 w-9" />
-                    </a>
-                </li>
-                <li>
-                    <a>
-                        <img src="profile.png" class="h-9 w-9" />
-                    </a>
-                </li>
-                <li>
-                    <a>
-                        <img src="profile.png" class="h-9 w-9" />
-                    </a>
-                </li>
-
-                <li>
-                    <a>
-                        <svg class="w-[14px] h-[14px] mt-3 ml-2 hover:text-primary cursor-pointer hover:scale-125 transition-all" icon="plus"></svg>
-                    </a>
-                </li>
-            </ul>
-
-            <h6 class="font-extrabold text-[18px] mt-8">Навыки</h6>
-
-            <div class="flex flex-wrap max-w-[200px] gap-1 mt-4 ml-[2px]">
-                <div class="text-[12px] border-light-solid border-[1px] px-[7px] py-[2px]">
-                    JS
-                </div>
-                <div class="text-[12px] border-light-solid border-[1px] px-[7px] py-[2px]">
-                    CSS
-                </div>
-                <div class="text-[12px] border-light-solid border-[1px] px-[7px] py-[2px]">
-                    HTML
-                </div>
-                <div class="text-[12px] border-light-solid border-[1px] px-[7px] py-[2px]">
-                    ANGULAR
-                </div>
-                <div class="text-[12px] border-light-solid border-[1px] px-[7px] py-[2px]">
-                    FRONTEND
-                </div>
-            </div>
-
-            <h6 class="font-extrabold text-[18px] mt-8">О себе</h6>
-
-            <p class="text-[12px] mt-4 leading-[133%]">
-                Список навыков, который мы обсудили выше, — основа резюме, но не единственная его часть. Также можно рассказать о себе в классическом смысле — этот раздел можно добавить в сопроводительное письмо.
-            </p>
-
-
-        </div>
-
-
-
-
-
+      <div
+        class="max-h-[calc(100vh-340px)] overflow-y-auto scrollbar-thin scrollbar-webkit"
+      >
+        <app-profile-post></app-profile-post>
+        <app-profile-post></app-profile-post>
+        <app-profile-post></app-profile-post>
+      </div>
     </div>
 
+    <div class="w-[340px] px-[24px]">
+      <div class="flex justify-between">
+        <h5 class="font-extrabold text-[18px]">Подписчики</h5>
+        <div
+          class="bg-[#98e9ab] text-[12px] text-dark-solid px-[6px] h-4 mt-1 font-bold flex justify-center items-center"
+        >
+          28
+        </div>
+      </div>
+
+      <ul class="mt-3 flex gap-x-[6px]">
+        <li>
+          <a>
+            <img src="profile.png" class="h-9 w-9" />
+          </a>
+        </li>
+        <li>
+          <a>
+            <img src="profile.png" class="h-9 w-9" />
+          </a>
+        </li>
+        <li>
+          <a>
+            <img src="profile.png" class="h-9 w-9" />
+          </a>
+        </li>
+        <li>
+          <a>
+            <img src="profile.png" class="h-9 w-9" />
+          </a>
+        </li>
+        <li>
+          <a>
+            <img src="profile.png" class="h-9 w-9" />
+          </a>
+        </li>
+        <li>
+          <a>
+            <img src="profile.png" class="h-9 w-9" />
+          </a>
+        </li>
+
+        <li>
+          <a>
+            <svg
+              class="w-[14px] h-[14px] mt-3 ml-2 hover:text-primary cursor-pointer hover:scale-125 transition-all"
+              icon="plus"
+            ></svg>
+          </a>
+        </li>
+      </ul>
+
+      <h6 class="font-extrabold text-[18px] mt-8">Навыки</h6>
+
+      <div class="flex flex-wrap max-w-[200px] gap-1 mt-4 ml-[2px]">
+        <div
+          class="text-[12px] border-light-solid border-[1px] px-[7px] py-[2px]"
+        >
+          JS
+        </div>
+        <div
+          class="text-[12px] border-light-solid border-[1px] px-[7px] py-[2px]"
+        >
+          CSS
+        </div>
+        <div
+          class="text-[12px] border-light-solid border-[1px] px-[7px] py-[2px]"
+        >
+          HTML
+        </div>
+        <div
+          class="text-[12px] border-light-solid border-[1px] px-[7px] py-[2px]"
+        >
+          ANGULAR
+        </div>
+        <div
+          class="text-[12px] border-light-solid border-[1px] px-[7px] py-[2px]"
+        >
+          FRONTEND
+        </div>
+      </div>
+
+      <h6 class="font-extrabold text-[18px] mt-8">О себе</h6>
+
+      <p class="text-[12px] mt-4 leading-[133%]">
+        Список навыков, который мы обсудили выше, — основа резюме,
+        но не единственная его часть. Также можно рассказать о себе
+        в классическом смысле — этот раздел можно добавить в сопроводительное
+        письмо.
+      </p>
+    </div>
+  </div>
 </section>

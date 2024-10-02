@@ -1,0 +1,142 @@
+<section class="flex gap-x-12 p-6">
+  <div class="px-6 flex flex-col max-w-[380px] items-center gap-x-6">
+    <div class="flex items-center gap-x-6">
+      <img class="w-[112px] h-[112px]" src="profile.png" alt="profile" />
+      <div class="flex flex-col gap-y-1">
+        <h1 class="text-[24px] font-extrabold">Райан Гослинг</h1>
+        <p>ryan.gosling</p>
+      </div>
+    </div>
+
+    <div class="mt-8 pt-8 border-t-[1px] border-dashed">
+      <div>
+        <h2 class="text-[18px] font-extrabold">Навыки</h2>
+        <div class="flex flex-wrap gap-1 mt-4">
+          <div
+            class="text-[12px] border-light-solid border-[1px] px-[7px] py-[2px]"
+          >
+            JS
+          </div>
+          <div
+            class="text-[12px] border-light-solid border-[1px] px-[7px] py-[2px]"
+          >
+            CSS
+          </div>
+          <div
+            class="text-[12px] border-light-solid border-[1px] px-[7px] py-[2px]"
+          >
+            ANGULAR
+          </div>
+        </div>
+      </div>
+      <div class="mt-8">
+        <h3 class="text-[18px] font-extrabold">О себе</h3>
+        <p class="mt-4 text-[12px] leading-[133%]">
+          Список навыков, который мы обсудили выше, — основа резюме,
+          но не единственная его часть. Также можно рассказать о себе
+          в классическом смысле — этот раздел можно добавить в сопроводительное
+          письмо.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <form
+    class="flex flex-col gap-y-5 border-[1px] border-light-solid bg-dark-solid p-8 max-h-[calc(100vh-48px)] w-[664px] overflow-y-auto scrollbar-thin scrollbar-webkit"
+  >
+    <div class="flex items-center gap-x-5">
+      <div class="flex flex-col gap-y-[2px] w-full">
+        <label class="text-[12px] text-light-transparent">Имя</label>
+        <input
+          class="bg-dark-solid text-[14px] border-b-[1px] border-light-solid focus:outline-none h-11"
+          placeholder="enter the data..."
+        />
+      </div>
+      <div class="flex flex-col gap-y-[2px] w-full">
+        <label class="text-[12px] text-light-transparent">Фамилия</label>
+        <input
+          class="bg-dark-solid text-[14px] border-b-[1px] border-light-solid focus:outline-none h-11"
+          placeholder="enter the data..."
+        />
+      </div>
+    </div>
+
+    <div class="flex flex-col gap-y-[2px] w-full">
+      <label class="text-[12px] text-light-transparent"
+        >Telegram username</label
+      >
+      <input
+        class="bg-dark-solid text-[14px] border-b-[1px] border-light-solid focus:outline-none h-11"
+        placeholder="enter the data..."
+      />
+    </div>
+
+    <div class="flex flex-col gap-y-[2px] w-full">
+      <label class="text-[12px] text-light-transparent">О себе</label>
+      <textarea
+        class="bg-dark-solid text-[12px] border-b-[1px] scrollbar-thin scrollbar-webkit border-light-solid focus:outline-none resize-none h-[108px] py-3"
+        placeholder="enter the data..."
+      ></textarea>
+    </div>
+
+    <div class="flex gap-x-8 border-b-[1px] border-light-solid pb-4">
+      <div class="relative">
+        <label class="text-[12px] text-light-transparent absolute top-[0px]"
+          >Аватарка</label
+        >
+        <img class="w-[140px] mt-6 h-[140px]" src="profile.png" />
+      </div>
+      <div
+        tabindex="0"
+        (click)="fileDrop.click()"
+        (keyup.enter)="fileDrop.click()"
+        class="flex flex-col border-[1px] w-[428px] h-[140px] mt-auto border-light-solid border-dashed"
+      >
+        <input class="hidden" type="file" #fileDrop />
+        <svg
+          class="h-[18px] w-[18px] mx-auto mt-10 text-white"
+          icon="upload"
+        ></svg>
+        <p class="text-[14px] mt-4 text-center">
+          Перетащите изображение или
+          <a class="text-primary underline cursor-pointer">Загрузите</a>
+          <br />
+          (разрешение до 5,000 x 5,000 px)
+        </p>
+      </div>
+    </div>
+
+    <div class="flex flex-col gap-y-[2px] w-full relative">
+      <label class="text-[12px] text-light-transparent">Навыки</label>
+      <input
+        class="bg-dark-solid text-[14px] border-b-[1px] border-light-solid focus:outline-none h-12"
+        placeholder="enter the data..."
+      />
+      <svg class="absolute right-0 top-8 h-5 w-4" icon="search"></svg>
+    </div>
+
+    <div class="flex items-center justify-between mt-[100px]">
+      <div class="flex items-center gap-x-5">
+        <div
+          class="p-[14px] border-[1px] cursor-pointer rounded-[2px] hover:bg-dark-active"
+        >
+          <svg class="h-4 w-3 text-red-400" icon="trash"></svg>
+        </div>
+        <div
+          routerLink=""
+          class="p-[14px] border-[1px] cursor-pointer rounded-[2px] hover:bg-dark-active"
+        >
+          <svg class="h-4 w-4" icon="leave"></svg>
+        </div>
+      </div>
+      <div class="flex items-center gap-x-5">
+        <app-button
+          variant="secondary"
+          routerLink=""
+          text="Отмена"
+        ></app-button>
+        <app-button text="Сохранить"></app-button>
+      </div>
+    </div>
+  </form>
+</section>
